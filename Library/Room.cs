@@ -38,7 +38,21 @@
 
         public virtual Room Clone()
         {
-            return new Room(Number);
+            Room cloneRoom = new Room(Number);
+
+            for (int i = 0; i < sides.Length; i++)
+            {
+                if (sides[i] is Room roomSide)
+                {
+                    cloneRoom.sides[i] = roomSide.Clone();
+                }
+                else
+                {
+                    cloneRoom.sides[i] = sides[i];
+                }
+            }
+
+            return cloneRoom;
         }
     }
 }

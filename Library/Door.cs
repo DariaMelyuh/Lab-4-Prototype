@@ -51,7 +51,9 @@
 
         public virtual Door Clone()
         {
-            return new Door(_room1.Clone(), _room2.Clone());
+            Room clonedRoom1 = _room1.Clone();
+            Room clonedRoom2 = _room2.Clone();
+            return new Door(clonedRoom1, clonedRoom2);
         }
     }
 }

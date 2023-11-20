@@ -21,7 +21,8 @@
 
         public override Room Clone()
         {
-            return new RoomWithTrap(Number);
+            RoomWithTrap cloneRoom = (RoomWithTrap)base.Clone();
+            return cloneRoom;
         }
     }
 }

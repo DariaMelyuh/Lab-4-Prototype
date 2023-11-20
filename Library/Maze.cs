@@ -16,7 +16,13 @@
 
         public Maze Clone()
         {
-            return new Maze();
+            Maze cloneMaze = new Maze();
+
+            foreach (var room in _rooms)
+            {
+                cloneMaze.AddRoom(room.Clone());
+            }
+            return cloneMaze;
         }
     }
 }

@@ -24,8 +24,9 @@
 
         public override Door Clone()
         {
-            return new DoorWithTrap() ;
+            DoorWithTrap cloneDoor = (DoorWithTrap)base.Clone();
+            cloneDoor.IsOpen = IsOpen;
+            return cloneDoor;
         }
-        
     }
 }
