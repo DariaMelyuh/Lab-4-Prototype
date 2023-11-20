@@ -20,9 +20,13 @@
 
             foreach (var room in _rooms)
             {
-                cloneMaze.AddRoom(room.Clone());
+                if (room is Room roomClone)
+                {
+                    cloneMaze.AddRoom(roomClone.Clone() as Room);
+                }
             }
             return cloneMaze;
         }
+
     }
 }

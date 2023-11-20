@@ -36,24 +36,13 @@
             Number = roomNumber;
         }
 
-        public virtual Room Clone()
+        public virtual IMapSite Clone()
         {
             Room cloneRoom = new Room(Number);
 
             for (int i = 0; i < sides.Length; i++)
             {
-                if (sides[i] is Room roomSide)
-                {
-                    cloneRoom.sides[i] = roomSide.Clone();
-                }
-                else if (sides[i] is Wall wallSide)
-                {
-                    cloneRoom.sides[i] = wallSide.Clone();
-                }
-                else
-                {
-                    cloneRoom.sides[i] = sides[i];
-                }
+                cloneRoom.sides[i] = sides[i].Clone();
             }
             return cloneRoom;
         }

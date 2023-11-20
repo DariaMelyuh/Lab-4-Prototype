@@ -7,7 +7,7 @@
             Console.WriteLine("Стена взорвана");
         }
 
-        public override Wall Clone()
+        public override IMapSite Clone()
         {
             return new WallWithBoomb();
         }

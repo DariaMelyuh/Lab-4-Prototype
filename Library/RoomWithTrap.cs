@@ -19,10 +19,9 @@
         public RoomWithTrap()
         { }
 
-        public override Room Clone()
+        public override IMapSite Clone()
         {
-            RoomWithTrap cloneRoom = (RoomWithTrap)base.Clone();
-            return cloneRoom;
+            return new RoomWithTrap(Number);
         }
     }
 }

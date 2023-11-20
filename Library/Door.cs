@@ -49,11 +49,11 @@
             }
         }
 
-        public virtual Door Clone()
+        public virtual IMapSite Clone()
         {
-            Room clonedRoom1 = _room1.Clone();
-            Room clonedRoom2 = _room2.Clone();
-            return new Door(clonedRoom1, clonedRoom2);
+            Room cloneRoom1 = _room1.Clone() as Room;
+            Room cloneRoom2 = _room2.Clone() as Room;
+            return new Door(cloneRoom1, cloneRoom2);
         }
     }
 }

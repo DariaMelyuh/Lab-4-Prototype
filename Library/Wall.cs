@@ -7,7 +7,7 @@
             Console.WriteLine("Вы врезались в стену");
         }
 
-        public virtual Wall Clone()
+        public virtual IMapSite Clone()
         {
             return new Wall();
         }

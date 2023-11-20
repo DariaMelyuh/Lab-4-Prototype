@@ -19,7 +19,7 @@
             }
         }
 
-        public override Room Clone()
+        public override IMapSite Clone()
         {
             return new RoomWithBoomb(Number);
         }

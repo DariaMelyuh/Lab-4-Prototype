@@ -22,9 +22,9 @@
             }
         }
 
-        public override Door Clone()
+        public override IMapSite Clone()
         {
-            DoorWithTrap cloneDoor = (DoorWithTrap)base.Clone();
+            DoorWithTrap cloneDoor = base.Clone() as DoorWithTrap;
             cloneDoor.IsOpen = IsOpen;
             return cloneDoor;
         }

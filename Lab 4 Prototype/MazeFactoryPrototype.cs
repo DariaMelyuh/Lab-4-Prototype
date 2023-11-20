@@ -53,14 +53,14 @@ namespace Lab_4_Prototype
             {
                 throw new ArgumentOutOfRangeException("Номер комнаты не соответствует условию");
             }
-            Room room = _prototypeRoom.Clone();
+            Room room = (Room)_prototypeRoom.Clone();
             room.Initialize(roomNumber);
             return room;
         }
 
         public override Wall CreateWall()
         {
-            Wall wall = _prototypeWall.Clone();
+            Wall wall = (Wall)_prototypeWall.Clone();
             return wall;
         }
 
@@ -71,7 +71,7 @@ namespace Lab_4_Prototype
                 throw new ArgumentNullException("Комната не может быть null");
             }
 
-            Door door = _prototypeDoor.Clone();
+            Door door = (Door)_prototypeDoor.Clone();
             door.Initialize(room1, room2);
             return door;
         }
