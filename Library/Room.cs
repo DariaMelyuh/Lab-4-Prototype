@@ -46,12 +46,15 @@
                 {
                     cloneRoom.sides[i] = roomSide.Clone();
                 }
+                else if (sides[i] is Wall wallSide)
+                {
+                    cloneRoom.sides[i] = wallSide.Clone();
+                }
                 else
                 {
                     cloneRoom.sides[i] = sides[i];
                 }
             }
-
             return cloneRoom;
         }
     }
