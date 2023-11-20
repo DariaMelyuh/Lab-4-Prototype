@@ -51,7 +51,7 @@
 
         public virtual Door Clone()
         {
-            return (Door)this.MemberwiseClone();
+            return new Door(_room1.Clone(), _room2.Clone());
         }
     }
 }

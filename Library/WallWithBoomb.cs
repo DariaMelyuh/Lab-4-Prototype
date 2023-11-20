@@ -9,7 +9,7 @@
 
         public override Wall Clone()
         {
-            return (WallWithBoomb)this.MemberwiseClone();
+            return new WallWithBoomb();
         }
     }
 }

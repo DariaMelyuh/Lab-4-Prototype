@@ -21,7 +21,7 @@
 
         public override Room Clone()
         {
-            return (RoomWithBoomb)this.MemberwiseClone();
+            return new RoomWithBoomb(Number);
         }
     }
 }

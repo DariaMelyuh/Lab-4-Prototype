@@ -38,7 +38,7 @@
 
         public virtual Room Clone()
         {
-            return (Room)this.MemberwiseClone();
+            return new Room(Number);
         }
     }
 }

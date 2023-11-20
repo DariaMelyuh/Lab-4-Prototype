@@ -16,7 +16,7 @@
 
         public Maze Clone()
         {
-            return (Maze)this.MemberwiseClone();
+            return new Maze();
         }
     }
 }

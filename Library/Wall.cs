@@ -9,7 +9,7 @@
 
         public virtual Wall Clone()
         {
-            return (Wall)this.MemberwiseClone();
+            return new Wall();
         }
     }
 }

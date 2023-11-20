@@ -24,7 +24,8 @@
 
         public override Door Clone()
         {
-            return (DoorWithTrap)this.MemberwiseClone();
+            return new DoorWithTrap() ;
         }
+        
     }
 }
